@@ -10,9 +10,9 @@ import img8 from '../../../public/gallery/toy-g-8.jpg'
 
 const Gallery = () => {
     return (
-        <div className='max-w-7xl mx-auto my-8 md:my-16'>
+        <div className='my-8 md:my-16'>
             <h1 className='text-center mb-10 font-extrabold text-4xl text-primary'>Our Toys Gallery</h1>
-            <div className='grid grid-cols-4 gap-5'>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
                 <div className='shadow-lg rounded p-5 mx-auto'>
                     <img className='w-72 h-56' src={img1} alt="" />
                 </div>
