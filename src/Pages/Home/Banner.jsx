@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div>
             <div>
-                <img className='w-full h-[500px]' src={banner} alt="" />
+                <img className='w-full h-full md:h-[500px]' src={banner} alt="" />
             </div>
         </div>
     );
