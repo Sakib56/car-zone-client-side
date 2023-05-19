@@ -39,8 +39,11 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 text-xl font-bold gap-x-10">
                     <ActiveLink to='/'>Home</ActiveLink>
                     <ActiveLink to='/allToys'>All Toys</ActiveLink>
-                    <ActiveLink to='/myToys'>My Toys</ActiveLink>
-                    <ActiveLink to='/addAToys'>Add A Toy</ActiveLink>
+                    {user && <>
+                        <ActiveLink to='/myToys'>My Toys</ActiveLink>
+                        <ActiveLink to='/addAToys'>Add A Toy</ActiveLink>
+                    </>
+                    }
                     <ActiveLink to='/blog'>Blog</ActiveLink>
                 </ul>
             </div>
