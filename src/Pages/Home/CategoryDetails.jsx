@@ -3,7 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const CategoryDetails = () => {
     const data = useLoaderData()
-    console.log(data)
+    // console.log(data)
     const { toy_name, details_description, picture, price, rating, seller_email, seller_name, available_quantity } = data
     return (
         <div className='my-20 max-w-7xl mx-auto rounded'>

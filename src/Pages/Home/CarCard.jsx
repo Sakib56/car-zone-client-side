@@ -14,7 +14,7 @@ const CarCard = ({ cars }) => {
                 </h2>
                 <h1 className='text-xl font-semibold'><span className='font-bold'>Price:</span> {price}</h1>
                 <p className='text-lg font-semibold'>Rating: {rating}</p>
-                <Link to={`/allToys/${_id}`}>
+                <Link to={`/toyDetails/${_id}`}>
                     <div className="card-actions justify-end">
                         <button className='btn border-0 bg-primary'>View Details</button>
                     </div>
