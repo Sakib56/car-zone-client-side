@@ -1,12 +1,13 @@
 import React from 'react';
-import img1 from '../../../public/gallery/toy-g-1.jpg'
-import img2 from '../../../public/gallery/toy-g-2.jpg'
-import img3 from '../../../public/gallery/toy-g-3.jpg'
-import img4 from '../../../public/gallery/toy-g-4.jpg'
-import img5 from '../../../public/gallery/toy-g-5.jpg'
-import img6 from '../../../public/gallery/toy-g-6.jpg'
-import img7 from '../../../public/gallery/toy-g-7.jpg'
-import img8 from '../../../public/gallery/toy-g-8.jpg'
+import img1 from '../../assets/gallery/toy-g-1.jpg'
+import img2 from '../../assets/gallery/toy-g-2.jpg'
+import img3 from '../../assets/gallery/toy-g-3.jpg'
+import img4 from '../../assets/gallery/toy-g-4.jpg'
+import img5 from '../../assets/gallery/toy-g-5.jpg'
+import img6 from '../../assets/gallery/toy-g-6.jpg'
+import img7 from '../../assets/gallery/toy-g-7.jpg'
+import img8 from '../../assets/gallery/toy-g-8.jpg'
+
 
 const Gallery = () => {
     return (

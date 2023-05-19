@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import logo from '../../assets/logo.jpg'
 import ActiveLink from '../../ActiveLink/ActiveLink';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOutUser } = useContext(AuthContext)
+    const [nameVisible, setNameVisible] = useState(false);
+    const handleLogout = () => {
+        logOutUser()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => console.log(error))
+    }
     return (
-        <nav className="navbar bg-secondary text-white p-3">
+        <nav className="navbar bg-secondary text-white p-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn bg-primary lg:hidden mr-5">
@@ -35,7 +45,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-primary">Login</a>
+                {
+                    user ? <div className='flex items-center gap-5 relative'>
+                        <div className=''>
+                            {
+                                user.photoURL && <img className='w-12 h-12 rounded-full' src={user.photoURL} onMouseEnter={() => setNameVisible(true)} onMouseLeave={() => setNameVisible(false)} alt="" />
+                            }
+                            <p className='absolute t-0 text-lg font-semibold'>{nameVisible && <span className="user-name">{user?.displayName}</span>}</p>
+                        </div>
+                        <button onClick={handleLogout} className='btn text-white bg-primary'>Sign Out</button>
+                    </div> :
+                        <div className='text-secondary'>
+                            <ActiveLink to='/login'><div className='border bg-gray-200 font-semibold hover:bg-gray-300 text-lg rounded border-black px-5 py-2'>
+                                Login
+                            </div></ActiveLink>
+                        </div>
+                }
             </div>
         </nav>
     );
