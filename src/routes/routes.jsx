@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Resister from "../Pages/Login/Resister";
 import CategoryDetails from "../Pages/Home/CategoryDetails";
 import PrivateRoute from "./PrivateRoute";
+import AllToys from "../Pages/AllToys/AllToys";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
             {
                 path: '/resister',
                 element: <Resister></Resister>
+            },
+            {
+                path: '/allToys',
+                element:<AllToys></AllToys>,
+                loader:()=>fetch('http://localhost:5000/allToys')
             },
             {
                 path: '/allToys/:id',
