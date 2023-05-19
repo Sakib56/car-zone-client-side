@@ -41,7 +41,7 @@ const Navbar = () => {
                     <ActiveLink to='/allToys'>All Toys</ActiveLink>
                     {user && <>
                         <ActiveLink to='/myToys'>My Toys</ActiveLink>
-                        <ActiveLink to='/addAToys'>Add A Toy</ActiveLink>
+                        <ActiveLink to='/addToys'>Add A Toy</ActiveLink>
                     </>
                     }
                     <ActiveLink to='/blog'>Blog</ActiveLink>

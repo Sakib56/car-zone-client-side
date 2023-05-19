@@ -11,6 +11,7 @@ import Resister from "../Pages/Login/Resister";
 import CategoryDetails from "../Pages/Home/CategoryDetails";
 import PrivateRoute from "./PrivateRoute";
 import AllToys from "../Pages/AllToys/AllToys";
+import AddToys from "../Pages/AddToys/AddToys";
 
 const router = createBrowserRouter([
     {
@@ -35,13 +36,17 @@ const router = createBrowserRouter([
             },
             {
                 path: '/allToys',
-                element:<AllToys></AllToys>,
-                loader:()=>fetch('http://localhost:5000/allToys')
+                element: <AllToys></AllToys>,
+                loader: () => fetch('http://localhost:5000/allToys')
             },
             {
                 path: '/allToys/:id',
                 element: <PrivateRoute><CategoryDetails></CategoryDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:5000/allToys/${params.id}`)
+            },
+            {
+                path: '/addToys',
+                element: <PrivateRoute><AddToys></AddToys></PrivateRoute>
             }
         ]
     },
