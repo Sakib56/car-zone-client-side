@@ -4,11 +4,13 @@ import { Link } from 'react-router-dom';
 
 
 
-const MyToysRow = ({ toy, index }) => {
+const MyToysRow = ({ toy, index, handleToyDelete }) => {
     const { _id, seller_name, toy_name, category_name, price, available_quantity, picture, seller_email, rating, details_description } = toy
 
     const [isOpen, setIsOpen] = useState(false);
-    
+
+
+
     return (
         <tr>
             <td className='text-xl'>{index}.</td>
@@ -38,14 +40,14 @@ const MyToysRow = ({ toy, index }) => {
             <td className='text-center'>
 
                 <Link to={`/toyUpdate/${_id}`}><button className='text-2xl text-indigo-500'><FaEdit /></button></Link>
-               
+
             </td>
             <td className="text-2xl text-center text-red-500">
-                <button className=''>
+                <button onClick={() => handleToyDelete(_id)} className=''>
                     <FaTrashAlt />
                 </button>
             </td>
-            
+
 
         </tr >
 
