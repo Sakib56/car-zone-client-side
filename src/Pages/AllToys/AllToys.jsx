@@ -10,7 +10,7 @@ const AllToys = () => {
 
     console.log(toys)
     const handleSearch = () => {
-        fetch(`https://car-zone-kids-server-site.vercel.app/getToysByText/${searchText}`)
+        fetch(`http://localhost:5000/getToysByText/${searchText}`)
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

@@ -2,21 +2,23 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import MyToysRow from './MyToysRow';
 import Swal from 'sweetalert2';
+import { useLoaderData } from 'react-router-dom';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [myToys, setMyToys] = useState([])
-    console.log(user.email)
+    console.log(user?.email)
 
 
     useEffect(() => {
-        fetch(`https://car-zone-kids-server-site.vercel.app/toysByEmail/${user?.email}`)
+        fetch(`http://localhost:5000/toysByEmail/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)
                 setMyToys(data)
             })
     }, [])
+
 
     const handleToyDelete = (_id) => {
         console.log(_id)
@@ -31,7 +33,7 @@ const MyToys = () => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`https://car-zone-kids-server-site.vercel.app/toyDelete/${_id}`, {
+                    fetch(`http://localhost:5000/toyDelete/${_id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())
@@ -54,39 +56,53 @@ const MyToys = () => {
     }
 
     return (
-        <div className='max-w-7xl mx-auto my-20'>
-            <div className="overflow-x-auto w-full">
-                <table className="table w-full">
-                    {/* head */}
-                    <thead>
-                        <tr>
-                            <th className="text-lg">SL</th>
-                            <th className="text-lg">Toys Picture <br /> Name,Category</th>
-                            <th className="text-lg">Price & Rating <br />
-                                Available Quantity
-                            </th>
-                            <th className="text-lg">seller Info</th>
-                            <th className="text-lg">Update</th>
-                            <th className="text-lg">Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            myToys?.map((toy, index) => <MyToysRow
-                                key={toy._id}
-                                toy={toy}
-                                index={index + 1}
-                                handleToyDelete={handleToyDelete}
-                            >
-                            </MyToysRow>)
-                        }
+        <div>
 
-                    </tbody>
+            <div className='max-w-7xl mx-auto my-20'>
+                <div div className='text-right mb-5' >
+                    <select defaultValue="option1" className="select select-secondary w-full max-w-xs text-lg">
+                        <option value="option1">Sorting By Price</option>
+                        <option>Price: ( Low &gt; High )</option>
+                        <option>Price: ( High &gt; Low ) </option>
 
-                </table>
-            </div>
+                    </select>
+                </div >
+                <div className="overflow-x-auto w-full">
+                    <table className="table w-full">
+                        {/* head */}
+                        <thead>
+                            <tr>
+                                <th className="text-lg">SL</th>
+                                <th className="text-lg">Toys Picture <br /> Name,Category</th>
+                                <th className="text-lg">Price & Rating <br />
+                                    Available Quantity
+                                </th>
+                                <th className="text-lg">seller Info</th>
+                                <th className="text-lg">Update</th>
+                                <th className="text-lg">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                myToys?.map((toy, index) => <MyToysRow
+                                    key={toy._id}
+                                    toy={toy}
+                                    index={index + 1}
+                                    handleToyDelete={handleToyDelete}
+                                >
+                                </MyToysRow>)
+                            }
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+            </div >
+
         </div>
-    );
+
+    )
 };
 
 export default MyToys;

@@ -13,7 +13,7 @@ const TableRow = ({ toy ,index}) => {
             <td>{category_name}</td>
             <td>{price}</td>
             <td className='text-center'>{available_quantity}</td>
-            <td><Link to={`/toyDetails/${_id}`}><button className='bg-secondary text-white px-5 py-2 rounded'>View details</button></Link></td>
+            <td><Link to={`/toy/${_id}`}><button className='bg-secondary text-white px-5 py-2 rounded'>View details</button></Link></td>
         </tr>
 
     );

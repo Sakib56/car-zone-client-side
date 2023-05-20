@@ -8,18 +8,17 @@ const PrivateRoute = ({ children }) => {
     const location = useLocation()
 
     if (loading) {
-        <div className='text-center'><ClipLoader
+            return <div className='text-center'><ClipLoader
             color="#36d7b7"
             // loading={loading}
             // cssOverride={override}
             size={150}
             aria-label="Loading Spinner"
             data-testid="loader"
-        /> </div>
-        return;
+        /> </div>;
     }
 
-    if (user) {
+    if (user?.email) {
         return children;
     }
     return (

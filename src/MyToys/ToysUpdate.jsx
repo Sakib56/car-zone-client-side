@@ -16,7 +16,7 @@ const ToysUpdate = () => {
         const toy_name = form.toysName.value
         const seller_name = form.sellerName.value;
         const category_name = form.sub_category.value;
-        const price = form.price.value;
+        const price = parseInt(form.price.value);
         const rating = form.rating.value;
         const available_quantity = form.quantity.value;
         const details_description = form.details.value;
@@ -24,7 +24,7 @@ const ToysUpdate = () => {
         const updatedToy = { picture, toy_name, seller_name, category_name, price, rating, available_quantity, details_description }
         console.log(updatedToy)
 
-        fetch(`https://car-zone-kids-server-site.vercel.app/toyUpdate/${_id}`, {
+        fetch(`http://localhost:5000/toyUpdate/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -139,7 +139,7 @@ const ToysUpdate = () => {
                     </div>
 
                     <div className='text-center mt-10'>
-                        <button className='bg-secondary rounded-lg px-5 py-3 -lg text-white font-bold text-lg'><input type="submit" value="Update Toy" /></button>
+                        <button className='bg-secondary rounded-lg px-5 py-3 -lg text-white font-bold text-lg'><input type="submit" className='cursor-pointer' value="Update Toy" /></button>
                     </div>
                 </form>
             </div>

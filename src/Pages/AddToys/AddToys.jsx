@@ -15,7 +15,7 @@ const AddToys = () => {
         const seller_name = form.sellerName.value;
         const seller_email = form.sellerEmail.value;
         const category_name = form.sub_category.value;
-        const price = form.price.value;
+        const price = parseInt(form.price.value);
         const rating = form.rating.value;
         const available_quantity = form.quantity.value;
         const details_description = form.details.value;
@@ -23,7 +23,7 @@ const AddToys = () => {
         const newToys = { picture, toy_name, seller_name, seller_email, category_name, price, rating, available_quantity, details_description }
         console.log(newToys)
 
-        fetch('https://car-zone-kids-server-site.vercel.app/allToys', {
+        fetch('http://localhost:5000/allToys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -105,7 +105,7 @@ const AddToys = () => {
                                 <span className="label-text text-lg font-bold">Price</span>
                             </label>
                             <label >
-                                <input type="text" placeholder="Enter toys price" name='price' className="input input-bordered w-full  py-3 px-2" required />
+                                <input type="number" placeholder="Enter toys price" name='price' className="input input-bordered w-full  py-3 px-2" required />
                             </label>
                         </div>
                         <div className="form-control">
@@ -136,7 +136,7 @@ const AddToys = () => {
                     </div>
 
                     <div className='text-center mt-10'>
-                        <button className='bg-secondary rounded-lg px-5 py-3 -lg text-white font-bold text-lg'><input type="submit" value="Add Toy" /></button>
+                        <button className='bg-secondary rounded-lg px-5 py-3 -lg text-white font-bold text-lg cursor-pointer'><input className='cursor-pointer' type="submit" value="Add Toy" /></button>
                     </div>
                 </form>
             </div>

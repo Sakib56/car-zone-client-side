@@ -5,7 +5,7 @@ import Footer from '../Pages/Shared/Footer';
 
 const Main = () => {
     return (
-        <div className='max-w-screen-2xl mx-auto'>
+        <div className='min-h-screen max-w-screen-2xl mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
