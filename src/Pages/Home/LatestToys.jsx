@@ -1,17 +1,6 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
 
-/**
- * 
- * https://i.ibb.co/nnwdjJh/bcedea2285ca600818cf56a89c454f46.jpg
- * 
- * https://i.ibb.co/7tYpkgG/mayfair-main.jpg
- * 
- * https://i.ibb.co/Hgvpw3k/3d-fast-steering-remote-car-toys-world-original-imaggrrzw7vtqbpy.webp
- * 
- * https://i.ibb.co/FYSM2gc/aacfbf4c-0e5f-47c8-8768-07445c8b400e-dfd364f23038d3f594e26b3d2a554e26.webp
- */
-
 const LatestToys = () => {
     return (
         <div className='mb-10 md:mb-28'>
