@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaStar } from 'react-icons/fa';
+
 
 const LatestToys = () => {
     return (
@@ -14,8 +15,8 @@ const LatestToys = () => {
                         <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                     </p>
                     <div className='flex justify-between'>
-                    <p className='mt-2 text-lg font-semibold'>Price: 2600</p>
-                    <button className='border py-1 px-4 text-primary font-semibold'>Add to cart</button>
+                        <p className='mt-2 text-lg font-semibold'>Price: 2600</p>
+                        <button className='border py-1 px-4 text-primary font-semibold'>Add to cart</button>
                     </div>
                 </div>
                 <div className='shadow-xl p-5 rounded'>
@@ -26,8 +27,8 @@ const LatestToys = () => {
                         <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                     </p>
                     <div className='flex justify-between'>
-                    <p className='mt-2 text-lg font-semibold'>Price: 3900</p>
-                    <button className='border py-1 px-4 text-primary font-semibold'>Add to cart</button>
+                        <p className='mt-2 text-lg font-semibold'>Price: 3900</p>
+                        <button className='border py-1 px-4 text-primary font-semibold'>Add to cart</button>
                     </div>
                 </div>
                 <div className='shadow-xl p-5 rounded'>
@@ -39,8 +40,8 @@ const LatestToys = () => {
                         <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                     </p>
                     <div className='flex justify-between'>
-                    <p className='mt-2 text-lg font-semibold'>Price: 4000</p>
-                    <button className='border py-1 px-4 text-primary font-semibold'>Add to cart</button>
+                        <p className='mt-2 text-lg font-semibold'>Price: 4000</p>
+                        <button className='border py-1 px-4 text-primary font-semibold'>Add to cart</button>
                     </div>
                 </div>
                 <div className='shadow-xl p-5 rounded'>
@@ -51,8 +52,8 @@ const LatestToys = () => {
                         <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
                     </p>
                     <div className='flex justify-between'>
-                    <p className='mt-2 text-lg font-semibold'>Price: 3200</p>
-                    <button className='border py-1 px-4 text-primary font-semibold'>Add to cart</button>
+                        <p className='mt-2 text-lg font-semibold'>Price: 3200</p>
+                        <button className='border py-1 px-4 text-primary font-semibold'>Add to cart</button>
                     </div>
                 </div>
             </div>
