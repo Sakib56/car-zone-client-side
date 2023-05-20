@@ -23,9 +23,12 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-secondary rounded-box w-52">
                         <ActiveLink to='/'>Home</ActiveLink>
                         <ActiveLink to='/allToys'>All Toys</ActiveLink>
-                        <ActiveLink to='/myToys'>My Toys</ActiveLink>
-                        <ActiveLink to='/addAToys'>Add A Toy</ActiveLink>
-                        <ActiveLink to='/blog'>Blog</ActiveLink>
+                        {user && <>
+                            <ActiveLink to='/myToys'>My Toys</ActiveLink>
+                            <ActiveLink to='/addToys'>Add A Toy</ActiveLink>
+                        </>
+                        }
+                        <ActiveLink to='/blog'>Blogs</ActiveLink>
                     </ul>
                 </div>
 
@@ -44,7 +47,7 @@ const Navbar = () => {
                         <ActiveLink to='/addToys'>Add A Toy</ActiveLink>
                     </>
                     }
-                    <ActiveLink to='/blog'>Blog</ActiveLink>
+                    <ActiveLink to='/blog'>Blogs</ActiveLink>
                 </ul>
             </div>
             <div className="navbar-end">

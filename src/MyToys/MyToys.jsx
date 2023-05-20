@@ -2,11 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import MyToysRow from './MyToysRow';
 import Swal from 'sweetalert2';
+import useTitle from '../Hooks/useTitle';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [myToys, setMyToys] = useState([])
     // console.log(user?.email)
+    useTitle('My Toys')
 
     useEffect(() => {
         fetch(`http://localhost:5000/toysByEmail/${user?.email}`)

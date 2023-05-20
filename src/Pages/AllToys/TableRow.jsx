@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const TableRow = ({ toy ,index}) => {
-    console.log(toy)
+    // console.log(toy)
     const { _id,seller_name, toy_name, category_name, price, available_quantity
     } = toy
     return (

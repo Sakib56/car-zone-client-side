@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import TableRow from './TableRow';
+import useTitle from '../../Hooks/useTitle';
 
 const AllToys = () => {
     const loaderData = useLoaderData()
     const [toys, setToys] = useState(loaderData)
     const [searchText, setSearchText] = useState('all');
-    console.log(searchText)
-
-    console.log(toys)
+    // console.log(searchText)
+    useTitle('All Toys')
+    // console.log(toys)
     const handleSearch = () => {
         fetch(`http://localhost:5000/getToysByText/${searchText}`)
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            setToys(data);
-          });
-      };
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                setToys(data);
+            });
+    };
     return (
         <div className='max-w-7xl mx-auto my-20'>
             <div className='flex justify-center mb-5'>

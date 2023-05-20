@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CarCard = ({ cars }) => {
-    console.log(cars)
+    // console.log(cars)
     const { _id, toy_name, picture, price, rating } = cars
-    console.log(_id)
+    // console.log(_id)
     return (
         <div className="card bg-base-100 shadow-2xl border-2 border-pink-600">
             <figure><img className='w-96 h-72 p-5' src={picture} alt="Shoes" /></figure>

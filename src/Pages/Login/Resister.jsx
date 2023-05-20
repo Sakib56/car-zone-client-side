@@ -3,9 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/login.jpg';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../../Hooks/useTitle';
 
 
 const Resister = () => {
+    useTitle('SignUp')
     const { createUser, updatedUserInfo, logOutUser } = useContext(AuthContext)
     const [showPassword, setShowPassword] = useState(false)
     const [error, setError] = useState('')

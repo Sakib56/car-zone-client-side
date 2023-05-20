@@ -3,10 +3,12 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Provider/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 
 const ToysUpdate = () => {
     const toy = useLoaderData()
     const { _id, seller_name, toy_name, category_name, price, available_quantity, picture, seller_email, rating, details_description } = toy
+    useTitle('Update Toy')
 
     const { user } = useContext(AuthContext)
     const handleUpdateToys = event => {

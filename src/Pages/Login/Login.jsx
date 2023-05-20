@@ -3,8 +3,10 @@ import img from '../../assets/login.jpg';
 import googleLoginImg from '../../assets/google.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const Login = () => {
+    useTitle('Login')
     const navigate = useNavigate()
     const location = useLocation()
     let from = location.state?.from?.pathname || "/";
