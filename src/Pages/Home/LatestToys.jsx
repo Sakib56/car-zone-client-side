@@ -3,8 +3,8 @@ import { FaStar } from 'react-icons/fa';
 
 const LatestToys = () => {
     return (
-        <div className='mb-10 md:mb-28'>
-            <h1 className='text-center text-4xl font-bold text-primary mb-5'>Our Latest Toys</h1>
+        <div className='mt-10 md:mt-28'>
+            <h1 className='text-center text-4xl font-bold text-primary mb-5 md:mb-12'>Our Latest Toys</h1>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-5'>
                 <div className='shadow-xl p-5 rounded'>
                     <img className='w-72 h-60 rounded-xl mx-auto' src="https://i.ibb.co/nnwdjJh/bcedea2285ca600818cf56a89c454f46.jpg" alt="" />

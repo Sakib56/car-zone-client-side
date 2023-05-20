@@ -11,7 +11,7 @@ const MyToys = () => {
     useTitle('My Toys')
 
     useEffect(() => {
-        fetch(`http://localhost:5000/toysByEmail/${user?.email}`)
+        fetch(`https://car-zone-kids-server-site.vercel.app/toysByEmail/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
@@ -34,7 +34,7 @@ const MyToys = () => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/toyDelete/${_id}`, {
+                    fetch(`https://car-zone-kids-server-site.vercel.app/toyDelete/${_id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())
@@ -60,7 +60,7 @@ const MyToys = () => {
         console.log(event.target.value);
         const sort = event.target.value;
 
-        fetch(`http://localhost:5000/myToys?email=${user?.email}&sort=${sort}`)
+        fetch(`https://car-zone-kids-server-site.vercel.app/myToys?email=${user?.email}&sort=${sort}`)
             .then(res => res.json())
             .then(data =>
                 setMyToys(data)

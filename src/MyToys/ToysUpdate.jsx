@@ -26,7 +26,7 @@ const ToysUpdate = () => {
         const updatedToy = { picture, toy_name, seller_name, category_name, price, rating, available_quantity, details_description }
         console.log(updatedToy)
 
-        fetch(`http://localhost:5000/toyUpdate/${_id}`, {
+        fetch(`https://car-zone-kids-server-site.vercel.app/toyUpdate/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'

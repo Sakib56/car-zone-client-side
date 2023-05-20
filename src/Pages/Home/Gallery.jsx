@@ -11,8 +11,8 @@ import img8 from '../../assets/gallery/toy-g-8.jpg'
 
 const Gallery = () => {
     return (
-        <div className='my-8 md:my-16'>
-            <h1 className='text-center mb-10 font-extrabold text-4xl text-primary'>Our Toys Gallery</h1>
+        <div className='mt-8 md:mt-20'>
+            <h1 className='text-center mb-5 md:mb-12 font-extrabold text-4xl text-primary'>Our Toys Gallery</h1>
             <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
                 <div className='shadow-lg rounded p-5 mx-auto'>
                     <img className='w-72 h-56' src={img1} alt="" />

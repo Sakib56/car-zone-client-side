@@ -11,8 +11,8 @@ import React from 'react';
 
 const ToysBlog = () => {
     return (
-        <div className='mb-10 md:mb-28'>
-            <h1 className='text-center text-4xl font-bold text-primary mb-7'>Our Toys Blogs</h1>
+        <div className='mt-10 md:mt-28'>
+            <h1 className='text-center text-4xl font-bold text-primary md-5 md:mb-12'>Our Toys Blogs</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                 <div className='shadow-xl p-5 rounded'>
                     <img className='w-96 h-72 rounded-lg' src="https://i.ibb.co/NnGkGTy/PAW-Article-Image-01.jpg" alt="" />

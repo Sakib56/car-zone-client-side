@@ -9,7 +9,7 @@ const ShopByCategory = () => {
     const [trucksCars, setTrucksCars] = useState()
     const [policeCars, setPoliceCars] = useState()
     useEffect(() => {
-        fetch('http://localhost:5000/allToys')
+        fetch('https://car-zone-kids-server-site.vercel.app/allToys')
             .then(res => res.json())
             .then(data => {
                 const sports = data.filter(dt => dt.category_name == 'sports car')
@@ -23,8 +23,9 @@ const ShopByCategory = () => {
     }, [])
 
     return (
-        <div className='my-10 md:my-28'>
-            <h1></h1>
+        <div className='mt-10 md:mt-28'>
+            <h1 className='text-center mb-5 md:mb-12 font-extrabold text-4xl text-primary'>Shop By Category</h1>
+
             <Tabs>
                 <TabList className='text-2xl flex justify-center mb-10 font-bold text-center' classID=''>
 
