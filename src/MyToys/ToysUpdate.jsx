@@ -24,7 +24,7 @@ const ToysUpdate = () => {
         const updatedToy = { picture, toy_name, seller_name, category_name, price, rating, available_quantity, details_description }
         console.log(updatedToy)
 
-        fetch(`http://localhost:5000/toyUpdate/${_id}`, {
+        fetch(`https://car-zone-kids-server-site.vercel.app/toyUpdate/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
@@ -49,10 +49,10 @@ const ToysUpdate = () => {
     return (
         <div className='max-w-6xl mx-auto my-20'>
             <h1 className='mx-auto rounded-lg text-center py-3 font-semibold text-white text-3xl  bg-secondary w-1/2'>Update Toys</h1>
-            <Link to="/">
+            <Link to="/myToys">
                 <p className='font-semibold flex gap-3 items-center my-5 text-xl'>
                     <span><FaArrowLeft /></span>
-                    All Toys
+                    My toys
                 </p>
             </Link>
 

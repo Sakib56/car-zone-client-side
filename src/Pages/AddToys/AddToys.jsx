@@ -23,7 +23,7 @@ const AddToys = () => {
         const newToys = { picture, toy_name, seller_name, seller_email, category_name, price, rating, available_quantity, details_description }
         console.log(newToys)
 
-        fetch('http://localhost:5000/allToys', {
+        fetch('https://car-zone-kids-server-site.vercel.app/allToys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -46,7 +46,7 @@ const AddToys = () => {
     return (
         <div className='max-w-6xl mx-auto my-20'>
             <h1 className='mx-auto text-center py-3 font-semibold text-white text-3xl rounded-lg bg-secondary w-1/2'>Add New Toys</h1>
-            <Link to="/">
+            <Link to="/allToys">
                 <p className='font-semibold flex gap-3 items-center my-5 text-xl'>
                     <span><FaArrowLeft /></span>
                     All Toys
