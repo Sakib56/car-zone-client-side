@@ -98,7 +98,7 @@ const MyToys = () => {
                             myToys?.map((toy, index) => <MyToysRow
                                 key={toy._id}
                                 toy={toy}
-                                // index={index + 1}
+                                index={index + 1}
                                 handleToyDelete={handleToyDelete}
                             >
                             </MyToysRow>)

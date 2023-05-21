@@ -27,7 +27,7 @@ To install and run this project locally, follow these steps:<br>
 
 
 ## Usage
-Once you have installed the project and started the development server, you can access the website at http://localhost:3000. From there, you can explore the various sections of the website and interact with the features that have been implemented. <br>
+Once you have installed the project and started the development server, you can access the website at http://localhost:3000 . From there, you can explore the various sections of the website and interact with the features that have been implemented. <br>
 If you wish to add a new toy for sale, you can do so by creating an account on the website and logging in. Once you are logged in, you will be able to access a private route where you can add new toy information, update existing toy information, or delete your own listings
 
 ## Contributing
