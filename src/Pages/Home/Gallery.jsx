@@ -23,32 +23,32 @@ const Gallery = () => {
     }, []);
 
     return (
-        <div className='mt-8 md:mt-20'>
+        <div className='mt-8 md:mt-20 overflow-hidden'>
             <h1 className='text-center mb-5 md:mb-12 font-extrabold text-4xl text-primary'>Our Toys Gallery</h1>
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
-                <div data-aos-offset="200" data-aos="fade-right" data-aos-once="false" className='shadow-lg rounded p-5 mx-auto'>
-                    <img className='w-72 h-56' src={img1} alt="" />
+            <div  className='grid grid-cols-2 md:grid-cols-4 gap-5'>
+                <div data-aos-offset="200" data-aos="fade-right" data-aos-once="false" className='shadow-lg h rounded p-5 mx-auto'>
+                    <img className='w-52 h-44 md:w-72 md:h-56' src={img1} alt="" />
                 </div>
                 <div data-aos-offset="200" data-aos="zoom-in" data-aos-once="false" className='shadow-lg rounded p-5 mx-auto'>
-                    <img className='w-72 h-56' src={img2} alt="" />
+                    <img className='w-52 h-44 md:w-72 md:h-56' src={img2} alt="" />
                 </div>
                 <div data-aos-offset="200" data-aos="zoom-in" data-aos-once="false" className='shadow-lg rounded p-5 mx-auto'>
-                    <img className='w-72 h-56' src={img3} alt="" />
+                    <img className='w-52 h-44 md:w-72 md:h-56' src={img3} alt="" />
                 </div>
                 <div data-aos-offset="200" data-aos="fade-left" data-aos-once="false" className='shadow-lg rounded p-5 mx-auto'>
-                    <img className='w-72 h-56' src={img4} alt="" />
+                    <img className='w-52 h-44 md:w-72 md:h-56' src={img4} alt="" />
                 </div>
                 <div data-aos-offset="200" data-aos="fade-right" data-aos-once="false" className='shadow-lg rounded p-5 mx-auto'>
-                    <img className='w-72 h-56' src={img5} alt="" />
+                    <img className='w-52 h-44 md:w-72 md:h-56' src={img5} alt="" />
                 </div>
                 <div data-aos-offset="200" data-aos="zoom-in" data-aos-once="false" className='shadow-lg rounded p-5 mx-auto'>
-                    <img className='w-72 h-56' src={img6} alt="" />
+                    <img className='w-52 h-44 md:w-72 md:h-56' src={img6} alt="" />
                 </div>
                 <div data-aos-offset="200" data-aos="zoom-in" data-aos-once="false" className='shadow-lg rounded p-5 mx-auto'>
-                    <img className='w-72 h-56' src={img7} alt="" />
+                    <img className='w-52 h-44 md:w-72 md:h-56' src={img7} alt="" />
                 </div>
                 <div data-aos-offset="200" data-aos="fade-left" data-aos-once="false" className='shadow-lg rounded p-5 mx-auto'>
-                    <img className='w-72 h-56' src={img8} alt="" />
+                    <img className='w-52 h-44 md:w-72 md:h-56' src={img8} alt="" />
                 </div>
             </div>
         </div>

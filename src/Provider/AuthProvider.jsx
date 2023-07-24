@@ -22,12 +22,13 @@ const AuthProvider = ({ children }) => {
         setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
+
     const logOutUser = () => {
         return signOut(auth)
     }
 
     const googleLogin = () => {
-        // setLoading(true)
+        setLoading(true)
         return signInWithPopup(auth, googleProvider)
     }
     const updatedUserInfo = (user, name, url) => {
