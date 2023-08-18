@@ -3,9 +3,9 @@ import logo from '../../assets/logo.jpg'
 
 const Footer = () => {
     return (
-        <div className='p-10 md:mt-20 bg-secondary text-white text-lg'>
-            <footer className="footer">
-                <div>
+        <div className='p-10 bg-pink-600 bg-opacity-85 text-white text-lg italic'>
+            <footer className="footer text-xl text-white text-opacity-85">
+                <div className=''>
                     <img className='h-20 w-20 rounded-full' src={logo} alt="" />
                     <p>Car Zone Kids Ltm.<br />Providing reliable store since 1992</p>
                     <div className="flex justify-center gap-5">
@@ -14,7 +14,7 @@ const Footer = () => {
                         <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
                     </div>
                 </div>
-                <div>
+                <div className=''>
                     <span className="footer-title">Company</span>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>

@@ -9,7 +9,7 @@ import useTitle from '../../Hooks/useTitle';
 const Home = () => {
     useTitle('Home')
     return (
-        <div>
+        <div className='bg-pink-100'>
             <Banner></Banner>
             <div className='max-w-7xl mx-auto'>
                 <Gallery></Gallery>

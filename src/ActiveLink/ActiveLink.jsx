@@ -5,7 +5,7 @@ const ActiveLink = ({ to, children }) => {
   return (
     <NavLink
       to={to}
-      className={({ isActive }) => isActive ? 'text-primary' : ''}
+      className={({ isActive }) => isActive ? 'text-secondary' : ''}
     >
       {children}
     </NavLink>

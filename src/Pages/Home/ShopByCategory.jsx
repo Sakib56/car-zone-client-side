@@ -23,9 +23,9 @@ const ShopByCategory = () => {
     }, [])
 
     return (
-        <div className='mt-10 md:mt-28'>
-            <h1 className='text-center mb-5 md:mb-12 font-extrabold text-4xl text-primary'>Shop By Category</h1>
+        <div className='mt-10 md:mt-28 overflow-hidden'>
 
+            <h1 className='text-center mb-5 md:mb-12 font-extrabold text-4xl text-pink-700 italic font-serif rounded-full bg-pink-200 w-fit p-2 mx-auto'>Shop By Category</h1>
             <Tabs>
                 <TabList className='text-2xl flex justify-center mb-10 font-bold text-center' classID=''>
 

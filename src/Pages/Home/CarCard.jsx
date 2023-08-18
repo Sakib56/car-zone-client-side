@@ -18,13 +18,13 @@ const CarCard = ({ cars }) => {
 
     return (
         <div data-aos-offset="200" data-aos="zoom-in" className="card bg-base-100 shadow-2xl border-2 border-pink-600">
-            <figure><img className='w-96 h-72 p-5' src={picture} alt="Shoes" /></figure>
-            <div className="card-body bg-gradient-to-tr from-pink-50 to-pink-100 rounded-b-2xl">
-                <h2 className="card-title text-2xl font-bold">
+            <figure><img className='w-80 h-64 p-5' src={picture} alt="Shoes" /></figure>
+            <div className="card-body bg-pink-200 rounded-b-2xl italic hover:bg-pink-300">
+                <h2 className="card-title text-2xl font-bold text-pink-500">
                     {toy_name}
                 </h2>
-                <h1 className='text-xl font-semibold'><span className='font-bold'>Price:</span> {price}</h1>
-                <p className='text-lg font-semibold'>Rating: {rating}</p>
+                <h1 className='text-xl font-semibold text-pink-600 text-opacity-80'><span className='font-bold'>Price:</span> ${price}</h1>
+                <p className='text-lg font-semibold text-pink-600'>Rating: {rating}</p>
                 <Link to={`/toy/${_id}`}>
                     <div className="card-actions justify-end">
                         <button className='btn border-0 bg-primary'>View Details</button>
